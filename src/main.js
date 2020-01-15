@@ -3,6 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+Vue.use(VueAxios, axios)
+
+Vue.prototype.$axios1 = axios
+axios.defaults.baseURL='https://musicapi.citrons.cn/'
+
+Vue.prototype.$axios2 = axios
+axios.defaults.baseURL='http://api.pingcc.cn/'
 
 Vue.config.productionTip = false
 
